@@ -1,9 +1,0 @@
-<launch>
-
-    <group ns="ns1">
-      <node pkg="ros_opencv_pub" type="ros_opencv_pub"  name="ros_opencv_pub"/>
-      <node pkg="ros_opencv_pub" type="ros_opencv_pub2"  name="ros_opencv_pub2"/>
-      <!-- <node pkg="ros_opencv_sub" type="ros_opencv_sub"  name="ros_opencv_sub"/> -->
-    </group>
-
-</launch>
