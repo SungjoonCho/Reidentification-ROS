@@ -22,14 +22,16 @@
 * 개발 환경
 
   <pre>
-  OS : Ubuntu 18.04
-  ROS ver : Melodic
-  GPU : RTX 2080ti
-  cuda : 10.2
-  driver : 440
-  cudnn : 8.0.3
-  python : 3.7  
-  tf-gpu : 1.5  
+	Ubuntu 18.04 LTS 64 bit
+	GPU : Geforce RTX 2080ti
+	Cuda : 10.2
+	driver : 440
+	cudnn : 8.0.3
+	ROS 1 Melodic
+	Python : 3.6 (virtual env)	
+	torch : 1.7.0
+	torchvision : 0.8.1
+	opencv-python : 4.1.2
   </pre>
   
   
