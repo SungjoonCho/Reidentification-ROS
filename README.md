@@ -80,15 +80,50 @@
 * 훈련 데이터셋 다운로드
 
   [market 1501](https://www.kaggle.com/pengcw1/market-1501/data)
+  
+* Training & Test
+  <pre>
+  python train.py --gpu_ids 0 --name ft_ResNet50 --train_all --batchsize 32  --data_dir your_data_path
+  </pre>
+  
+  <pre>
+  python test.py --gpu_ids 0 --name ft_ResNet50 --test_dir your_data_path  --batchsize 32 --which_epoch 59
+  </pre>
+  
+* Demo
+  <pre>
+  python demo.py --query_index 777
+  </pre>
+  
+  Reference : [Person_reID_baseline_pytorch](https://github.com/layumi/Person_reID_baseline_pytorch/blob/master/tutorial/README.md)
 
-* Person detection
 
-* Feature extract(Person)
+* Person detection (yolo v5) & Feature Extract
+  
+  <pre>
+    $python extractor2.py
+  </pre>
 
+  detect2.py의 yolo v5로 사람 탐지 후 반환된 bounding box 좌표의 사람 feature 추출
+  
+  각 사람 ROI는 runs2에 저장됨
+  
+  추출된 feature는 /runs2/output2_extract_result.mat에 저장됨
+  
+  
 * 사람 찾기(Query Frame)
 
-* Visualization
-
+  <pre>
+    $python demo2_full.py 
+  </pre>
+  
+  test_frame에 사진 저장해두고 실행시, query_extractor2.py에서 frame의 feature 추출 후 
+  
+  test_result/detect/에 각 인물 ROI 저장, ./test_result/detect에 feature 값 query2_extract_result.mat 저장
+  
+  그리고 output2_extract_result과 query2_extract_result 비교하며 파일명(촬영시간 및 ID)로 사람 분별
+  
+  
 
 * 실험 과정 영상 - [Google Drive](https://drive.google.com/drive/folders/1nzh57DeMqPWge6X7Q2PlNvUwW7iobQ2W?usp=sharing)
 
